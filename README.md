@@ -1,21 +1,17 @@
-# ARC9 BOCW Submachine Guns DLC
+# ARC9 BOCW Sniper Rifles
 
-7 more BOCW SMGs on the base [ARC9](https://github.com/HaodongMo/ARC-9)
+3 launch BOCW sniper rifles on the base [ARC9](https://github.com/HaodongMo/ARC-9)
 
 ## You need to have [Shared Content](https://github.com/multinettt/ARC-9_BOCW_Shared_Content) in order to avoid missing textures, materials and sounds.
 
 ## Customization is limited without [BOCW Attachments](https://github.com/multinettt/ARC-9_BOCW_Attachments)
 
 ## Weapons List:
-### Submachine Guns DLC:
+### Sniper Rifles:
 
-- MAC-10
-- LC10
-- PPSh-41
-- OTs 9 (OTs-02 Kiparis)
-- TEC-9
-- LAPA
-- UGR (APS)
+- Pelington 703 (Remington 700PSS)
+- LW3 - Tundra (Accuracy International PM/AW Hybrid)
+- M82 (Barrett M82A1M)
 
 ## Personalization:
 
