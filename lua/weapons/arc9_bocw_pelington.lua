@@ -1,25 +1,25 @@
 --=============================================================================
 --   ARC9 CALL OF DUTY: BLACK OPS COLD WAR
---   SUBMACHINE GUNS DLC
---   MAC-10
+--   SNIPER RIFLES
+--   Pelington 703
 --=============================================================================
 --[[
 --   SWEP INFORMATION:
 
 --   BASE  : ARC9
 --   BUILD : v2025.9
---   SR.NO : 011587
+--   SR.NO : 
 
 
-ooo        ooooo       .o.         .oooooo.             .o    .oooo.   
-`88.       .888'      .888.       d8P'  `Y8b          o888   d8P'`Y8b  
- 888b     d'888      .8"888.     888                   888  888    888 
- 8 Y88. .P  888     .8' `888.    888                   888  888    888 
- 8  `888'   888    .88ooo8888.   888          8888888  888  888    888 
- 8    Y     888   .8'     `888.  `88b    ooo           888  `88b  d88' 
-o8o        o888o o88o     o8888o  `Y8bood8P'          o888o  `Y8bd8P'  
-
-
+ooooooooo.             oooo   o8o                             .                             ooooooooo   .oooo.     .oooo.   
+`888   `Y88.           `888   `"'                           .o8                            d"""""""8'  d8P'`Y8b  .dP""Y88b  
+ 888   .d88'  .ooooo.   888  oooo  ooo. .oo.    .oooooooo .o888oo  .ooooo.  ooo. .oo.            .8'  888    888       ]8P' 
+ 888ooo88P'  d88' `88b  888  `888  `888P"Y88b  888' `88b    888   d88' `88b `888P"Y88b          .8'   888    888     <88b.  
+ 888         888ooo888  888   888   888   888  888   888    888   888   888  888   888         .8'    888    888      `88b. 
+ 888         888    .o  888   888   888   888  `88bod8P'    888 . 888   888  888   888        .8'     `88b  d88' o.   .88P  
+o888o        `Y8bod8P' o888o o888o o888o o888o `8oooooo.    "888" `Y8bod8P' o888o o888o      .8'       `Y8bd8P'  `8bd88P'   
+                                               d"     YD                                                                    
+                                               "Y88888P'                                                                    
 ]]
 
 AddCSLuaFile()
