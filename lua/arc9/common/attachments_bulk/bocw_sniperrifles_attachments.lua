@@ -14,6 +14,43 @@ o888o        `Y8bod8P' o888o o888o o888o o888o `8oooooo.    "888" `Y8bod8P' o888
                                                d"     YD                                                                    
                                                "Y88888P'                                                                    
 ]]
+--========== OPTIC ====================
+ATT = {}
+
+ATT.PrintName = "Unertl USMC Sniper Scope 10x"
+ATT.CompactName = "OPTIC"
+ATT.Icon = Material("entities/bocw_atts/optics/pellington.png", "mips smooth")
+ATT.Description = [[Default Pelington 703 scope.]]
+ATT.SortOrder = -1
+
+ATT.Model = "models/weapons/arc9/atts/bocw_scope_pelington703.mdl"
+
+ATT.Category = {"bocw_optic"}
+
+ATT.Sights = {
+    {
+        Pos = Vector(0, 6.1, -1.035),
+        Ang = Angle(0, 0, 0),
+        Magnification = 1.5,
+        ViewModelFOV = 70
+    },
+}
+
+ATT.RTScope = true
+ATT.RTScopeSubmatIndex = 2
+ATT.RTScopeMagnification = 8
+ATT.RTScopeReticle = Material("hud/arc9_bocw/scopes/reticle_pellington.png", "mips smooth")
+ATT.RTScopeReticleScale = 2
+ATT.RTScopeColorable = true
+ATT.RTScopeShadowIntensity = 1
+
+ATT.ScopeScreenRatio = 0.5
+
+ATT.ModelOffset = Vector(0, 0, -0.11)
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_pelington703_optic")
 --========== BARREL ===================
 ATT = {}
 
@@ -48,7 +85,7 @@ ARC9.LoadAttachment(ATT, "bocw_pelington703_barrel_extended")
 ATT = {}
 
 ATT.PrintName = [[23.3" Cavalry Lancer]] --// 2
-ATT.CompactName = [[23.3" CAVLRY]]
+ATT.CompactName = [[23.3" CVLRY]]
 ATT.Icon = Material("entities/bocw_atts/barrels/pelington703_cavalry.png", "mips smooth")
 ATT.Description = [[Heavy profile barrel broach rifled to improve damage against enemy vehicles.
 
@@ -231,7 +268,7 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeOverride = 7
+ATT.ClipSizeMult = 1.4
 
 ATT.ReloadTimeMult = 1.28
 
@@ -250,7 +287,7 @@ Fast Loader is an attachment in Call of Duty: Black Ops 4 and in Call of Duty: B
 
 ATT.SortOrder = 2
 
-ATT.Category = "bocw_pelington703_mag"
+ATT.Category = "bocw_pelington703_mag_fast"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_pelington703_magazine_fast1.mdl"
 ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_pelington703_magazine_fast1.mdl"
@@ -285,7 +322,7 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeOverride = 7
+ATT.ClipSizeMult = 1.4
 ATT.ReloadTimeMult = 0.9
 
 ATT.AimDownSightsTimeMult = 1.05
@@ -314,7 +351,7 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeOverride = 9
+ATT.ClipSizeMult = 1.8
 
 ATT.ReloadTimeMult = 1.55
 ATT.AimDownSightsTimeMult = 1.05
@@ -334,7 +371,7 @@ The Vandal Speed Loader is a type of Magazine attachment available for all Light
 
 ATT.SortOrder = 5
 
-ATT.Category = "bocw_pelington703_mag"
+ATT.Category = "bocw_pelington703_mag_fast"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_pelington703_magazine_fastpro.mdl"
 ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_pelington703_magazine_fastpro.mdl"
@@ -372,7 +409,7 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeOverride = 9
+ATT.ClipSizeMult = 1.8
 ATT.ReloadTimeMult = 0.95
 
 ATT.MultAimDownSightsTime = 1.1
@@ -558,7 +595,7 @@ The CQB Pad is a Stock attachment available in Call of Duty: Black Ops Cold War.
 
 ATT.SortOrder = 1
 
-ATT.Category = "bocw_pelington703_stock"
+ATT.Category = "bocw_pelington703_stock_pad"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_pelington703_stock_cqb.mdl"
 
@@ -604,7 +641,7 @@ The Marathon Pad is a set of Stock attachments for Sniper Rifles, the EM2 assaul
 
 ATT.SortOrder = 3
 
-ATT.Category = "bocw_pelington703_stock"
+ATT.Category = "bocw_pelington703_stock_pad"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_pelington703_stock_marathon.mdl"
 
