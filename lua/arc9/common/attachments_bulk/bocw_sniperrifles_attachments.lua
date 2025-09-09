@@ -18,8 +18,8 @@ o888o        `Y8bod8P' o888o o888o o888o o888o `8oooooo.    "888" `Y8bod8P' o888
 ATT = {}
 
 ATT.PrintName = "Unertl USMC Sniper Scope 10x"
-ATT.CompactName = "OPTIC"
-ATT.Icon = Material("entities/bocw_atts/optics/pellington.png", "mips smooth")
+ATT.CompactName = "PELINGTON"
+ATT.Icon = Material("entities/bocw_atts/optics/pelington703_optic.png", "mips smooth")
 ATT.Description = [[Default Pelington 703 scope.]]
 ATT.SortOrder = -1
 
@@ -39,7 +39,7 @@ ATT.Sights = {
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 2
 ATT.RTScopeMagnification = 8
-ATT.RTScopeReticle = Material("hud/arc9_bocw/scopes/reticle_pellington.png", "mips smooth")
+ATT.RTScopeReticle = Material("hud/arc9_bocw/reticle_pelington703.png", "mips smooth")
 ATT.RTScopeReticleScale = 2
 ATT.RTScopeColorable = true
 ATT.RTScopeShadowIntensity = 1
@@ -715,6 +715,43 @@ ooooo        oooooo   oooooo     oooo   .oooo.                 ooooooooooooo    
  888       o      `888'    `888'      o.   .88P                     888       888   888   888   888  888   888   888     d8(  888  
 o888ooooood8       `8'      `8'       `8bd88P'                     o888o      `V88V"V8P' o888o o888o `Y8bod88P" d888b    `Y888""8o 
 ]]
+--========== OPTIC ====================
+ATT = {}
+
+ATT.PrintName = "LW3 Scope"
+ATT.CompactName = "LW3-TUNDRA"
+ATT.Icon = Material("entities/bocw_atts/optics/lw3tundra_optic.png", "mips smooth")
+ATT.Description = [[Default LW3 - Tundra scope.]]
+ATT.SortOrder = -1
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lw3tundra_scope.mdl"
+
+ATT.Category = {"bocw_optic"}
+
+ATT.Sights = {
+    {
+        Pos = Vector(0, 8.6, -1.33),
+        Ang = Angle(0, 0, 0),
+        Magnification = 1.5,
+        ViewModelFOV = 70
+    },
+}
+
+ATT.RTScope = true
+ATT.RTScopeSubmatIndex = 3
+ATT.RTScopeMagnification = 8
+ATT.RTScopeReticle = Material("hud/arc9_bocw/reticle_lw3tundra.png", "mips smooth")
+ATT.RTScopeReticleScale = 1.5
+ATT.RTScopeColorable = true
+ATT.RTScopeShadowIntensity = 5
+
+ATT.ScopeScreenRatio = 0.5
+
+ATT.ModelOffset = Vector(0, 0, 0)
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_lw3tundra_optic")
 --========== BARREL ===================
 ATT = {}
 
@@ -740,7 +777,7 @@ ATT.PhysBulletMuzzleVelocityMult = 1.18
 ATT.MuzzleParticleOverride_Priority = 100
 ATT.MuzzleDevice = true
 
-ATT.ActivateElements = {"barrel_extended"}
+ATT.ActivateElements = {"barrel_extended", "barrelgone"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
@@ -749,7 +786,7 @@ ARC9.LoadAttachment(ATT, "bocw_lw3tundra_barrel_extended")
 ATT = {}
 
 ATT.PrintName = [[26.5" Cavalry Lancer]] --// 2
-ATT.CompactName = [[26.5" CAVLRY]]
+ATT.CompactName = [[26.5" CVLRY]]
 ATT.Icon = Material("entities/bocw_atts/barrels/lw3tundra_cavalry.png", "mips smooth")
 ATT.Description = [[Heavy profile barrel broach rifled to improve damage against enemy vehicles.
 
@@ -801,7 +838,7 @@ ATT.RPMMult = 1.11
 ATT.MuzzleParticleOverride_Priority = 100
 ATT.MuzzleDevice = true
 
-ATT.ActivateElements = {"barrel_rapidfire"}
+ATT.ActivateElements = {"barrel_rapidfire", "barrelgone"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
@@ -833,7 +870,7 @@ ATT.SwayMultSighted = 1.2
 ATT.MuzzleParticleOverride_Priority = 100
 ATT.MuzzleDevice = true
 
-ATT.ActivateElements = {"barrel_combatrecon"}
+ATT.ActivateElements = {"barrel_combatrecon", "barrelgone"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
@@ -842,7 +879,7 @@ ARC9.LoadAttachment(ATT, "bocw_lw3tundra_barrel_combatrecon")
 ATT = {}
 
 ATT.PrintName = [[26.5" Hammer Forged]]
-ATT.CompactName = [[26.5" FORGED]]
+ATT.CompactName = [[26.5" FORGD]]
 ATT.Icon = Material("entities/bocw_atts/barrels/lw3tundra_hammerforged.png", "mips smooth")
 ATT.Description = [[Shortened steel barrel button rifled to improve fire rate.
 
@@ -901,7 +938,7 @@ ATT.SupplyLimitOverride = 3
 ATT.MuzzleParticleOverride_Priority = 100
 ATT.MuzzleDevice = true
 
-ATT.ActivateElements = {"barrel_tigerteam"}
+ATT.ActivateElements = {"barrel_tigerteam", "barrelgone"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
@@ -1239,7 +1276,7 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SpeedMultSights = 1.25
 
-ATT.ActivateElements = {"stockmountgone"}
+ATT.ActivateElements = {"cheekrestgone"}
 
 ARC9.LoadAttachment(ATT, "bocw_lw3tundra_stock_tactical")
 
@@ -1264,6 +1301,8 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SprintToFireTimeMult = 0.9
 
+ATT.ActivateElements = {"stockgone", "cheekrestgone"}
+
 ARC9.LoadAttachment(ATT, "bocw_lw3tundra_stock_cqb")
 
 ATT = {}
@@ -1284,6 +1323,8 @@ ATT.Model = "models/weapons/arc9/atts/bocw_lw3tundra_stock_duster.mdl"
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.ActivateElements = {"stockgone"}
 
 ARC9.LoadAttachment(ATT, "bocw_lw3tundra_stock_duster")
 
@@ -1309,6 +1350,8 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 ATT.SprintToFireTimeMult = 0.7
 
 ATT.SpreadMultHipFire = 1.15
+
+ATT.ActivateElements = {"stockgone"}
 
 ARC9.LoadAttachment(ATT, "bocw_lw3tundra_stock_marathon")
 
@@ -1336,6 +1379,8 @@ ATT.SpeedMultSighted = 1.5
 
 ATT.SpreadMultHipFire = 1.15
 
+ATT.ActivateElements = {"cheekrestgone"}
+
 ARC9.LoadAttachment(ATT, "bocw_lw3tundra_stock_sascombat")
 
 ATT = {}
@@ -1361,6 +1406,8 @@ ATT.SprintToFireTimeMult = 0.7
 ATT.SpeedMultSighted = 1.4
 
 ATT.SpreadMultHipFire = 1.3
+
+ATT.ActivateElements = {"stockgone"}
 
 ARC9.LoadAttachment(ATT, "bocw_lw3tundra_stock_raider")
 --[[
@@ -2020,3 +2067,28 @@ ATT.SpeedMultSighted = 1.4
 ATT.SpreadMultHipFire = 1.3
 
 ARC9.LoadAttachment(ATT, "bocw_m82_stock_raider")
+
+--
+
+ATT = {}
+
+ATT.PrintName = "LW3 Muzzle Device"
+ATT.CompactName = "MUZZLE"
+ATT.Icon = Material("entities/bocw_atts/muzzles/lw3tundra_base.png", "mips smooth")
+ATT.Description = [[Default LW3 - Tundra muzzle device.]]
+
+ATT.SortOrder = -10
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lw3tundra_muzzle.mdl"
+
+ATT.Category = {"bocw_lw3tundra_muzzle"}
+
+ATT.ModelOffset = Vector(-1.1, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.MuzzleParticleOverride_Priority = 1000
+ATT.MuzzleDevice = true
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_lw3tundra_muzzle_base")

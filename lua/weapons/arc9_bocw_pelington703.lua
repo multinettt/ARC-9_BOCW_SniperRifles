@@ -79,7 +79,7 @@ SWEP.ViewModelFOVBase = 70
 -------------------------- DAMAGE PROFILE
 
 SWEP.DamageMax = 110 -- Damage done at point blank range
-SWEP.DamageMin = 22 -- Damage done at maximum range
+SWEP.DamageMin = 60 -- Damage done at maximum range
 
 SWEP.DamageRand = 1 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
