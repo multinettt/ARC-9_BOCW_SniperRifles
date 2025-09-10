@@ -1,6 +1,6 @@
 --=============================================================================
 --   ARC9 CALL OF DUTY: BLACK OPS COLD WAR
---   SUBMACHINE GUNS DLC
+--   SNIPER RIFLES
 --   LW3 - Tundra
 --=============================================================================
 --[[
@@ -601,7 +601,7 @@ SWEP.Attachments = {
         Pos = Vector(6, 0, 4.72),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_optic"},
+        Category = {"bocw_lw3tundra_optic", "bocw_optic"},
         InstalledElements = {"optic_mount"},
         Installed = "bocw_lw3tundra_optic",
         Integral = "bocw_lw3tundra_optic",

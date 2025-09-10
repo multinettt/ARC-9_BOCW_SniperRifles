@@ -18,14 +18,14 @@ o888o        `Y8bod8P' o888o o888o o888o o888o `8oooooo.    "888" `Y8bod8P' o888
 ATT = {}
 
 ATT.PrintName = "Unertl USMC Sniper Scope 10x"
-ATT.CompactName = "PELINGTON"
+ATT.CompactName = "OPTIC"
 ATT.Icon = Material("entities/bocw_atts/optics/pelington703_optic.png", "mips smooth")
 ATT.Description = [[Default Pelington 703 scope.]]
 ATT.SortOrder = -1
 
 ATT.Model = "models/weapons/arc9/atts/bocw_scope_pelington703.mdl"
 
-ATT.Category = {"bocw_optic"}
+ATT.Category = {"bocw_pelington703_optic"}
 
 ATT.Sights = {
     {
@@ -719,14 +719,14 @@ o888ooooood8       `8'      `8'       `8bd88P'                     o888o      `V
 ATT = {}
 
 ATT.PrintName = "LW3 Scope"
-ATT.CompactName = "LW3-TUNDRA"
+ATT.CompactName = "OPTIC"
 ATT.Icon = Material("entities/bocw_atts/optics/lw3tundra_optic.png", "mips smooth")
 ATT.Description = [[Default LW3 - Tundra scope.]]
 ATT.SortOrder = -1
 
 ATT.Model = "models/weapons/arc9/atts/bocw_lw3tundra_scope.mdl"
 
-ATT.Category = {"bocw_optic"}
+ATT.Category = {"bocw_lw3tundra_optic"}
 
 ATT.Sights = {
     {
@@ -1419,6 +1419,43 @@ ooo        ooooo  .ooooo.     .oooo.
  8    Y     888  `8.   .88P .oP     .o 
 o8o        o888o  `boood8'  8888888888 
 ]]
+--========== OPTIC ====================
+ATT = {}
+
+ATT.PrintName = "M82 Scope"
+ATT.CompactName = "OPTIC"
+ATT.Icon = Material("entities/bocw_atts/optics/m82_optic.png", "mips smooth")
+ATT.Description = [[Default M82 scope.]]
+ATT.SortOrder = -1
+
+ATT.Model = "models/weapons/arc9/atts/bocw_m82_scope.mdl"
+
+ATT.Category = {"bocw_m82_optic"}
+
+ATT.Sights = {
+    {
+        Pos = Vector(0, 8.1, -0.01),
+        Ang = Angle(0, 0, 0),
+        Magnification = 1.5,
+        ViewModelFOV = 70
+    },
+}
+
+ATT.RTScope = true
+ATT.RTScopeSubmatIndex = 3
+ATT.RTScopeMagnification = 8
+ATT.RTScopeReticle = Material("hud/arc9_bocw/reticle_m82.png", "mips smooth")
+ATT.RTScopeReticleScale = 1.3
+ATT.RTScopeColorable = true
+ATT.RTScopeShadowIntensity = 5
+
+ATT.ScopeScreenRatio = 0.5
+
+ATT.ModelOffset = Vector(0, 0, 1.63)
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_m82_optic")
 --========== BARREL ===================
 ATT = {}
 
@@ -1483,14 +1520,14 @@ ARC9.LoadAttachment(ATT, "bocw_m82_barrel_cavalry")
 
 ATT = {}
 
-ATT.PrintName = [[25.8" Rapid Fire]] --// 3
-ATT.CompactName = [[25.8" RAPID]]
+ATT.PrintName = [[20.6" Rapid Fire]] --// 3
+ATT.CompactName = [[20.6" RAPID]]
 ATT.Icon = Material("entities/bocw_atts/barrels/m82_rapidfire.png", "mips smooth")
 ATT.Description = [[Durable steel barrel made from lighter components to improve fire rate.
 
 The Rapid Fire barrel is an attachment type featured in Call of Duty: Black Ops Cold War, Call of Duty: Mobile and Call of Duty: Vanguard. It simply increases fire rate or decreases the delay between bursts. The Rapid Fire barrel is available for all Tactical Rifles and for some Sniper Rifles.]]
 
-ATT.SortOrder = 25.8
+ATT.SortOrder = 20.6
 
 ATT.Category = "bocw_m82_barrel"
 
@@ -2092,3 +2129,26 @@ ATT.MuzzleDevice = true
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_lw3tundra_muzzle_base")
+
+ATT = {}
+
+ATT.PrintName = "M82 Muzzle Device"
+ATT.CompactName = "MUZZLE"
+ATT.Icon = Material("entities/bocw_atts/muzzles/lw3tundra_base.png", "mips smooth")
+ATT.Description = [[Default M82 muzzle device.]]
+
+ATT.SortOrder = -10
+
+ATT.Model = "models/weapons/arc9/atts/bocw_m82_muzzle.mdl"
+
+ATT.Category = {"bocw_m82_muzzle"}
+
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.MuzzleParticleOverride_Priority = 1000
+ATT.MuzzleDevice = true
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_m82_muzzle_base")

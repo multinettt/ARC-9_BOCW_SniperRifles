@@ -584,7 +584,7 @@ SWEP.Attachments = {
         Pos = Vector(5.8, 0, 2.82),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_optic"},
+        Category = {"bocw_pelington703_optic", "bocw_optic"},
         Installed = "bocw_pelington703_optic",
         Integral = "bocw_pelington703_optic",
     },

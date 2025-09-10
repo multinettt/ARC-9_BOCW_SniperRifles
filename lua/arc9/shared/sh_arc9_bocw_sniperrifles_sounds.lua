@@ -226,3 +226,165 @@ sound.Add({
     volume = 1.0,
     sound = "weapons/arc9/bocw_lw3tundra/lw3tundra_fire_silenced.wav"
 })
+--[[
+ooo        ooooo  .ooooo.     .oooo.   
+`88.       .888' d88'   `8. .dP""Y88b  
+ 888b     d'888  Y88..  .8'       ]8P' 
+ 8 Y88. .P  888   `88888b.      .d8P'  
+ 8  `888'   888  .8'  ``88b   .dP'     
+ 8    Y     888  `8.   .88P .oP     .o 
+o8o        o888o  `boood8'  8888888888 
+]]
+-- MAGAZINE
+sound.Add({
+    name = "ARC9_BOCW.M82_reload_magoutstart",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_m82/m82_reload_magoutstart.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.M82_reload_magout",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_m82/m82_reload_magout.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.M82_reload_maginstart",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_m82/m82_reload_maginstart.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.M82_reload_magin",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_m82/m82_reload_magin.wav"
+})
+
+-- CHARGING HANDLE
+
+sound.Add({
+    name = "ARC9_BOCW.M82_reload_boltback",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_m82/m82_reload_boltback.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.M82_reload_boltrelease",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_m82/m82_reload_boltrelease.wav"
+})
+
+-- READY FOLEY
+
+sound.Add({
+    name = "ARC9_BOCW.M82_ready_boltback",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_m82/m82_ready_boltback.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.M82_ready_boltrelease",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_m82/m82_ready_boltrelease.wav"
+})
+
+-- RELOAD FOLEY
+
+sound.Add({
+    name = "ARC9_BOCW.M82_reload_start",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_m82/m82_reload_start.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.M82_reload_shoulder",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_m82/m82_reload_shoulder.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.M82_rattle",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_m82/m82_rattle.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.M82_reload_shoulderdown",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_m82/m82_reload_shoulderdown.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.M82_reload_end",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_m82/m82_reload_end.wav"
+})
+
+-- INSPECT FOLEY
+
+sound.Add({
+    name = "ARC9_BOCW.M82_inspect_part1",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_m82/m82_inspect_part1.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.M82_inspect_part2",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_m82/m82_inspect_part2.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.M82_inspect_part3",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_m82/m82_inspect_part3.wav"
+})
+
+-- PULLOUT PUTAWAY
+
+sound.Add({
+    name = "ARC9_BOCW.M82_draw",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_m82/m82_draw.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.M82_holster",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_m82/m82_holster.wav"
+})
+-----------------------------------------------
+-- FIRING SOUNDS
+
+sound.Add({ -- BLACK OPS COLD WAR
+    name = "ARC9_BOCW.M82_fire",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = "weapons/arc9/bocw_m82/m82_fire.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.M82_fire_silenced",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_m82/m82_fire_silenced.wav"
+})
