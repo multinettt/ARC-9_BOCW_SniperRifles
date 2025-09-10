@@ -591,10 +591,10 @@ SWEP.Attachments = {
     {
         PrintName = "MUZZLE",
         Bone = "tag_barrel",
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(21.65, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(1, 0, 0),
-        Category = {"bocw_pelington703_muzzle", "bocw_smg_muzzle_west45"},
+        Icon_Offset = Vector(0, 0, 0),
+        Category = {"bocw_pelington703_muzzle"},
         InstalledElements = {"muzzlegone"},
     },
     {
