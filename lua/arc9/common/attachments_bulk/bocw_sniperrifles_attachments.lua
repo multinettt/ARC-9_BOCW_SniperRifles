@@ -23,7 +23,7 @@ ATT.Icon = Material("entities/bocw_atts/optics/pelington703_optic.png", "mips sm
 ATT.Description = [[Default Pelington 703 scope.]]
 ATT.SortOrder = -1
 
-ATT.Model = "models/weapons/arc9/atts/bocw_scope_pelington703.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_pelington703_scope.mdl"
 
 ATT.Category = {"bocw_pelington703_optic"}
 
@@ -50,7 +50,28 @@ ATT.ModelOffset = Vector(0, 0, -0.11)
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
-ARC9.LoadAttachment(ATT, "bocw_pelington703_optic")
+ARC9.LoadAttachment(ATT, "bocw_pelington703_optic_base")
+
+ATT = {}
+
+ATT.PrintName = "Iron Sights"
+ATT.CompactName = "IRON SIGHTS"
+ATT.Icon = Material("entities/bocw_atts/optics/sniper_ironsights.png", "mips smooth")
+ATT.Description = [[Sniper iron sights provide better peripheral vision for improved tracking of moving targets.
+
+The Iron Sights attachment return in Call of Duty: Black Ops Cold War as a Optic attachment exclusive to the Sniper Rifle weapon class. Replacing the default scope with a set of flipped up sights.]]
+
+ATT.SortOrder = 0
+
+ATT.Model = "models/weapons/arc9/atts/bocw_pelington703_optic_ironsights.mdl"
+
+ATT.Category = {"bocw_pelington703_optic"}
+
+ATT.ModelOffset = Vector(-1.9, 0, 0)
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_pelington703_optic_ironsights")
 --========== MUZZLE ===================
 ATT = {}
 
@@ -471,7 +492,7 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 ATT.ClipSizeMult = 1.8
 ATT.ReloadTimeMult = 0.95
 
-ATT.MultAimDownSightsTime = 1.1
+ATT.AimDownSightsTimeMult = 1.1
 
 ATT.ActivateElements = {"pelington703_mag_mix"}
 
@@ -810,7 +831,24 @@ ATT.ModelOffset = Vector(0, 0, 0)
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
-ARC9.LoadAttachment(ATT, "bocw_lw3tundra_optic")
+ARC9.LoadAttachment(ATT, "bocw_lw3tundra_optic_base")
+
+ATT = {}
+
+ATT.PrintName = "Iron Sights"
+ATT.CompactName = "IRON SIGHTS"
+ATT.Icon = Material("entities/bocw_atts/optics/sniper_ironsights.png", "mips smooth")
+ATT.Description = [[Sniper iron sights provide better peripheral vision for improved tracking of moving targets.
+
+The Iron Sights attachment return in Call of Duty: Black Ops Cold War as a Optic attachment exclusive to the Sniper Rifle weapon class. Replacing the default scope with a set of flipped up sights.]]
+
+ATT.SortOrder = 0
+
+ATT.Category = {"bocw_lw3tundra_optic", "bocw_m82_optic"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_sniper_optic_ironsights")
 --========== MUZZLE ===================
 ATT = {}
 
@@ -1195,7 +1233,7 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 ATT.ClipSizeMult = 1.8
 ATT.ReloadTimeMult = 0.6
 
-ATT.MultAimDownSightsTime = 1.1
+ATT.AimDownSightsTimeMult = 1.1
 
 ATT.ActivateElements = {"lw3tundra_mag_mix"}
 
@@ -1542,7 +1580,7 @@ ATT.ModelOffset = Vector(0, 0, 1.63)
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
-ARC9.LoadAttachment(ATT, "bocw_m82_optic")
+ARC9.LoadAttachment(ATT, "bocw_m82_optic_base")
 --========== MUZZLE ===================
 ATT = {}
 
@@ -2015,7 +2053,7 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 ATT.ClipSizeMult = 1.8
 ATT.ReloadTimeMult = 0.6
 
-ATT.MultAimDownSightsTime = 1.1
+ATT.AimDownSightsTimeMult = 1.1
 
 ATT.ActivateElements = {"m82_mag_mix"}
 

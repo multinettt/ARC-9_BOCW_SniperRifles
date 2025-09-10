@@ -106,11 +106,11 @@ SWEP.ArmDamage = 1
 SWEP.LegDamage = 1
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 1.4,
-    [HITGROUP_CHEST] = 1,
+    [HITGROUP_HEAD] = 2,
+    [HITGROUP_CHEST] = 1.4,
     [HITGROUP_STOMACH] = 1,
-    [HITGROUP_LEFTARM] = 1,
-    [HITGROUP_RIGHTARM] = 1,
+    [HITGROUP_LEFTARM] = 1.3,
+    [HITGROUP_RIGHTARM] = 1.3,
     [HITGROUP_LEFTLEG] = 1,
     [HITGROUP_RIGHTLEG] = 1,
 }
@@ -200,9 +200,9 @@ SWEP.Spread = math.rad(1 / 37.5)
 SWEP.SpreadMultRecoil = 1.8
 
 SWEP.SpreadMultSights = 0.1
-SWEP.SpreadAddHipFire = math.rad(110 / 37.5)
+SWEP.SpreadAddHipFire = math.rad(360 / 37.5)
 SWEP.SpreadAddMove = math.rad(100 / 37.5)
-SWEP.SpreadAddMidAir = math.rad(100 / 37.5)
+SWEP.SpreadAddMidAir = math.rad(150 / 37.5)
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- math.rad(108 / 37.5)
 
 SWEP.RecoilPatternDrift = 5
@@ -296,7 +296,7 @@ SWEP.DryFireSound = "ARC9_BOCW.Shared_DryFire_SMG"
 SWEP.FiremodeSound = "arc9/firemode.wav"
 SWEP.ToggleAttSound = "items/flashlight1.wav"
 
-SWEP.EnterSightsSound = "ARC9_BOCW.Shared_ADS_In"
+SWEP.EnterSightsSound = ""
 SWEP.ExitSightsSound = "ARC9_BOCW.Shared_ADS_Out"
 
 SWEP.EnterBipodSound = "arc9/bipod_down.wav"
@@ -383,7 +383,7 @@ SWEP.PoseParameters = {} -- Poseparameters to manage. ["parameter"] = starting v
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(0, -4, 0.3),
+    Pos = Vector(0, -5, 0.3),
     Ang = Angle(0, 0, 0),
     Magnification = 1.4,
     Blur = true,
@@ -457,11 +457,6 @@ SWEP.AttachmentElements = {
     ["maggone"] = {
         Bodygroups = {
             {1, 1},
-        }
-    },
-    ["optic_mount"] = {
-        Bodygroups = {
-            {2, 1},
         }
     },
     ["barrelgone"] = {
@@ -563,7 +558,7 @@ SWEP.AttachmentTableOverrides = {
     ["bocw_optic_hangmanrf"] = {
         VisualRecoil = 0.1
     },
-    ["bocw_m82_optic"] = {
+    ["bocw_m82_optic_base"] = {
         VisualRecoil = 0.1,
         SwayMultSights = 2
     },
@@ -587,13 +582,12 @@ SWEP.Attachments = {
     {
         PrintName = "OPTIC", -- print name
         Bone = "tag_weapon",
-        Pos = Vector(5, 0, 4.55),
+        Pos = Vector(5.8, 0, 4.55),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_m82_optic", "bocw_optic"},
-        InstalledElements = {"optic_mount"},
-        Installed = "bocw_m82_optic",
-        Integral = "bocw_m82_optic",
+        Installed = "bocw_m82_optic_base",
+        Integral = "bocw_m82_optic_base",
     },
     {
         PrintName = "MUZZLE",
@@ -703,6 +697,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
+
+    if attached["bocw_sniper_optic_ironsights"] then
+        vm:SetBodygroup(2, 0)
+    end
+
+    if attached["bocw_m82_optic_base"] or attached["bocw_optic"] then
+        vm:SetBodygroup(2, 1)
+    end
 end
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)
@@ -729,6 +731,9 @@ SWEP.Animations = {
     ["enter_sights"] = {
         Source = "ads_in",
         Time = 1,
+        EventTable = {
+            { s = "ARC9_BOCW.Shared_ADS_In", t = 0.25 },
+        },
     },
     ["idle_sights"] = {
         Source = "idle",
@@ -833,7 +838,7 @@ SWEP.Animations = {
         Source = "reload",
         Time = 3.42,
         NoMagSwap = true,
-        MinProgress = 0.65,
+        MinProgress = 0.75,
         EventTable = {
             { s = "ARC9_BOCW.M82_reload_start", t = 0 },
             { s = "ARC9_BOCW.M82_reload_shoulder", t = 0.5 },
@@ -870,7 +875,7 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         Time = 4.62,
-        MinProgress = 0.45,
+        MinProgress = 0.55,
         MagSwapTime = 1,
         DropMagAt = 0.55,
         EventTable = {
@@ -914,7 +919,7 @@ SWEP.Animations = {
     ["reload_ext"] = {
         Source = "reload_ext",
         Time = 3.42,
-        MinProgress = 0.65,
+        MinProgress = 0.75,
         EventTable = {
             { s = "ARC9_BOCW.M82_reload_start", t = 0 },
             { s = "ARC9_BOCW.M82_reload_shoulder", t = 0.5 },
@@ -951,7 +956,7 @@ SWEP.Animations = {
     ["reload_empty_ext"] = {
         Source = "reload_ext_empty",
         Time = 4.62,
-        MinProgress = 0.45,
+        MinProgress = 0.55,
         MagSwapTime = 1,
         DropMagAt = 0.55,
         EventTable = {
@@ -995,7 +1000,7 @@ SWEP.Animations = {
     ["reload_fast"] = {
         Source = "reload_fast",
         Time = 3.42,
-        MinProgress = 0.65,
+        MinProgress = 0.7,
         EventTable = {
             { s = "ARC9_BOCW.M82_reload_start", t = 0 },
             { s = "ARC9_BOCW.M82_reload_magoutstart", t = 0.8 },
@@ -1030,7 +1035,7 @@ SWEP.Animations = {
     ["reload_empty_fast"] = {
         Source = "reload_fast_empty",
         Time = 4.62,
-        MinProgress = 0.45,
+        MinProgress = 0.5,
         DropMagAt = 0.55,
         EventTable = {
             { s = "ARC9_BOCW.M82_reload_start", t = 0 },
@@ -1071,7 +1076,7 @@ SWEP.Animations = {
     ["reload_mix"] = {
         Source = "reload_mix",
         Time = 3.42,
-        MinProgress = 0.65,
+        MinProgress = 0.7,
         EventTable = {
             { s = "ARC9_BOCW.M82_reload_start", t = 0 },
             { s = "ARC9_BOCW.M82_reload_magoutstart", t = 0.8 },
@@ -1106,7 +1111,7 @@ SWEP.Animations = {
     ["reload_empty_mix"] = {
         Source = "reload_mix_empty",
         Time = 4.62,
-        MinProgress = 0.45,
+        MinProgress = 0.5,
         MagSwapTime = 1,
         DropMagAt = 0.55,
         EventTable = {

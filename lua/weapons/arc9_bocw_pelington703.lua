@@ -207,9 +207,9 @@ SWEP.Spread = math.rad(1 / 37.5)
 SWEP.SpreadMultRecoil = 1.8
 
 SWEP.SpreadMultSights = 0.1
-SWEP.SpreadAddHipFire = math.rad(110 / 37.5)
+SWEP.SpreadAddHipFire = math.rad(360 / 37.5)
 SWEP.SpreadAddMove = math.rad(100 / 37.5)
-SWEP.SpreadAddMidAir = math.rad(100 / 37.5)
+SWEP.SpreadAddMidAir = math.rad(150 / 37.5)
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- math.rad(108 / 37.5)
 
 SWEP.RecoilPatternDrift = 5
@@ -235,14 +235,14 @@ SWEP.NPCWeight = 50
 -------------------------- HANDLING
 
 SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.
-SWEP.Sway = 0.3 -- How much the gun sways.
+SWEP.Sway = 1 -- How much the gun sways.
+SWEP.SwayMultHipFire = 0 -- How much the gun sways.
+SWEP.SwayMultSights = 0.3
 
 SWEP.HoldBreathTime = 5 -- time that you can hold breath for
 SWEP.RestoreBreathTime = 4
 
 SWEP.FreeAimRadiusSights = 0
-
-SWEP.SwayMultSights = 0.5
 
 SWEP.AimDownSightsTime = 0.583 -- How long it takes to go from hip fire to aiming down sights.
 SWEP.SprintToFireTime = 0.433 -- How long it takes to go from sprinting to being able to fire.
@@ -303,7 +303,7 @@ SWEP.DryFireSound = "ARC9_BOCW.Shared_DryFire_SMG"
 SWEP.FiremodeSound = "arc9/firemode.wav"
 SWEP.ToggleAttSound = "items/flashlight1.wav"
 
-SWEP.EnterSightsSound = "ARC9_BOCW.Shared_ADS_In"
+SWEP.EnterSightsSound = ""
 SWEP.ExitSightsSound = "ARC9_BOCW.Shared_ADS_Out"
 
 SWEP.EnterBipodSound = "arc9/bipod_down.wav"
@@ -393,7 +393,7 @@ SWEP.PoseParameters = {} -- Poseparameters to manage. ["parameter"] = starting v
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(0, -1.5, 0),
+    Pos = Vector(0, -7, 0.25),
     Ang = Angle(0, 0, 0),
     Magnification = 1.4,
     Blur = true,
@@ -487,42 +487,42 @@ SWEP.AttachmentElements = {
     ["barrel_extended"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(2.94, 0, 0),
+                Pos = Vector(23.65, 0, 0),
             },
         },
     },
     ["barrel_cavalry"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(4.53, 0, 0),
+                Pos = Vector(19.65, 0, 0),
             },
         },
     },
     ["barrel_reinforced"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(3.72, 0, 0),
+                Pos = Vector(23.65, 0, 0),
             },
         },
     },
-    ["barrel_ranger"] = {
+    ["barrel_combatrecon"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(2.93, 0, 0),
+                Pos = Vector(25.65, 0, 0),
             }
         },
     },
-    ["barrel_rifled"] = {
+    ["barrel_ultralight"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(4.53, 0, 0),
+                Pos = Vector(17.5, 0, 0),
             },
         },
     },
-    ["barrel_taskforce"] = {
+    ["barrel_tigerteam"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(3.72, 0, 0),
+                Pos = Vector(24.65, 0, 0),
             }
         },
     },
@@ -558,7 +558,7 @@ SWEP.AttachmentTableOverrides = {
     ["bocw_optic_hangmanrf"] = {
         VisualRecoil = 0.1
     },
-    ["bocw_pelington703_optic"] = {
+    ["bocw_pelington703_optic_base"] = {
         VisualRecoil = 0.1
     },
     ["bocw_optic_royalkross4x"] = {
@@ -585,8 +585,8 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_pelington703_optic", "bocw_optic"},
-        Installed = "bocw_pelington703_optic",
-        Integral = "bocw_pelington703_optic",
+        Installed = "bocw_pelington703_optic_base",
+        Integral = "bocw_pelington703_optic_base",
     },
     {
         PrintName = "MUZZLE",
@@ -727,6 +727,9 @@ SWEP.Animations = {
     ["enter_sights"] = {
         Source = "ads_in",
         Time = 1,
+        EventTable = {
+            { s = "ARC9_BOCW.Shared_ADS_In", t = 0.25 },
+        },
     },
     ["idle_sights"] = {
         Source = "idle",
