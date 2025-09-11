@@ -250,10 +250,10 @@ SWEP.ShootWhileSprint = false
 
 SWEP.Speed = 1
 
-SWEP.SpeedMult = 1
-SWEP.SpeedMultSprint = 0.685185185185185
-SWEP.SpeedMultSights = 0.7916666666666667
-SWEP.SpeedMultShooting = 0.95
+SWEP.SpeedMult = 0.95
+SWEP.SpeedMultSprint = 0.7061403508771929
+SWEP.SpeedMultSights = 0.3196881091617934
+SWEP.SpeedMultShooting = 0.5
 SWEP.SpeedMultMelee = 0.8
 SWEP.SpeedMultCrouch = 1
 --SWEP.SpeedMultBlindFire = 1
@@ -492,7 +492,7 @@ SWEP.AttachmentElements = {
     ["barrel_extended"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(1.5, 0, 0),
+                Pos = Vector(1, 0, 0),
             },
         },
     },
@@ -506,14 +506,14 @@ SWEP.AttachmentElements = {
     ["barrel_rapidfire"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(0.2, 0, 0),
+                Pos = Vector(-0.9, 0, 0),
             },
         },
     },
     ["barrel_combatrecon"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(2.3, 0, 0),
+                Pos = Vector(2, 0, 0),
             }
         },
     },
@@ -527,7 +527,7 @@ SWEP.AttachmentElements = {
     ["barrel_tigerteam"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(1.5, 0, 0),
+                Pos = Vector(1, 0, 0),
             }
         },
     },
@@ -597,7 +597,7 @@ SWEP.Attachments = {
     {
         PrintName = "MUZZLE",
         Bone = "tag_muzzle",
-        Pos = Vector(1.1, 0, 0),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_lw3tundra_muzzle"},

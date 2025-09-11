@@ -216,7 +216,7 @@ ATT.RPMMult = 1.11
 ATT.PhysBulletMuzzleVelocityMult = 1.26
 
 ATT.SpeedMultSighted = 0.8
-ATT.SwayMultSighted = 1.15
+ATT.SwayMult = 1.15
 
 ATT.MuzzleParticleOverride_Priority = 100
 ATT.MuzzleDevice = true
@@ -248,7 +248,7 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.PhysBulletMuzzleVelocityMult = 1.43
 
-ATT.SwayMultSighted = 1.2
+ATT.SwayMult = 1.2
 
 ATT.MuzzleParticleOverride_Priority = 100
 ATT.MuzzleDevice = true
@@ -2361,7 +2361,7 @@ ATT.Model = "models/weapons/arc9/atts/bocw_lw3tundra_muzzle.mdl"
 
 ATT.Category = {"bocw_lw3tundra_muzzle"}
 
-ATT.ModelOffset = Vector(-1.1, 0, 0)
+ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.MuzzleParticleOverride_Priority = 1000
