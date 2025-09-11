@@ -481,16 +481,6 @@ SWEP.AttachmentElements = {
             {6, 1},
         }
     },
-    ["bodymount_lasermix"] = {
-        Bodygroups = {
-            {7, 1},
-        }
-    },
-    ["bodymount_flashlight"] = {
-        Bodygroups = {
-            {7, 2},
-        }
-    },
     ["barrel_extended"] = {
         AttPosMods = {
             [2] = {
@@ -618,20 +608,18 @@ SWEP.Attachments = {
     {
         PrintName = "BODY",
         Bone = "tag_barrel",
-        Pos = Vector(-1.5, 0.9, 0),
-        Ang = Angle(0, 0, 0),
+        Pos = Vector(3.3, 1, 0.4),
+        Ang = Angle(0, 0, -25),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_submachineguns_body_laserwest", "bocw_submachineguns_body_mixwest"},
-        InstalledElements = {"bodymount_lasermix"},
+        Category = {"bocw_sniperrifles_body_laserwest", "bocw_sniperrifles_body_mixwest"},
     },
     {
         Hidden = true,
         MergeSlots = {4,5},
         Bone = "tag_barrel",
-        Pos = Vector(-1.5, 1.58, -0.045),
+        Pos = Vector(5.6, 1.3, 0.7),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_submachineguns_body_flashwest"},
-        InstalledElements = {"bodymount_flashlight"},
+        Category = {"bocw_sniperrifles_body_flashwest"},
     },
     {
         PrintName = "UNDRBARREL",
