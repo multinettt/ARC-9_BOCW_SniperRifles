@@ -131,7 +131,7 @@ SWEP.TracerSize = 0.5
 
 -------------------------- MAGAZINE
 
-SWEP.Ammo = "pistol" -- What ammo type this gun uses.
+SWEP.Ammo = "ar2" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 5 -- Self-explanatory.
@@ -160,7 +160,7 @@ SWEP.DropMagazineTime = 2
 SWEP.DropMagazineQCA = 4 -- QC Attachment drop mag from, would drop from shell port if not defined
 SWEP.DropMagazinePos = Vector(0, 0, 0) -- offsets
 SWEP.DropMagazineAng = Angle(0, -90, -90)
-SWEP.DropMagazineVelocity = Vector(0, -100, 0) -- Put something here if your anim throws the mag with force
+SWEP.DropMagazineVelocity = Vector(0, 50, 0) -- Put something here if your anim throws the mag with force
 
 -------------------------- FIREMODES
 
@@ -871,7 +871,7 @@ SWEP.Animations = {
         Time = 4.62,
         MinProgress = 0.55,
         MagSwapTime = 1,
-        DropMagAt = 0.55,
+        DropMagAt = 2,
         EventTable = {
             { s = "ARC9_BOCW.M82_reload_start", t = 0 },
             { s = "ARC9_BOCW.M82_reload_shoulder", t = 0.5 },
@@ -884,8 +884,8 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.M82_reload_boltrelease", t = 3.7 },
             { s = "ARC9_BOCW.M82_reload_end", t = 4.3 },
             { hide = 0, t = 0 },
-            { hide = 1, t = 0.55 },
-            { hide = 0, t = 0.8 },
+            { hide = 1, t = 2 },
+            { hide = 0, t = 2.2 },
         },
         IKTimeLine = {
             {
@@ -952,7 +952,7 @@ SWEP.Animations = {
         Time = 4.62,
         MinProgress = 0.55,
         MagSwapTime = 1,
-        DropMagAt = 0.55,
+        DropMagAt = 2,
         EventTable = {
             { s = "ARC9_BOCW.M82_reload_start", t = 0 },
             { s = "ARC9_BOCW.M82_reload_shoulder", t = 0.5 },
@@ -965,8 +965,8 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.M82_reload_boltrelease", t = 3.7 },
             { s = "ARC9_BOCW.M82_reload_end", t = 4.3 },
             { hide = 0, t = 0 },
-            { hide = 1, t = 0.55 },
-            { hide = 0, t = 0.8 },
+            { hide = 1, t = 2 },
+            { hide = 0, t = 2.2 },
         },
         IKTimeLine = {
             {
@@ -1030,7 +1030,7 @@ SWEP.Animations = {
         Source = "reload_fast_empty",
         Time = 4.62,
         MinProgress = 0.5,
-        DropMagAt = 0.55,
+        DropMagAt = 1.4,
         EventTable = {
             { s = "ARC9_BOCW.M82_reload_start", t = 0 },
             { s = "ARC9_BOCW.M82_reload_magoutstart", t = 0.8 },
@@ -1041,8 +1041,8 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.M82_reload_boltrelease", t = 3.4 },
             { s = "ARC9_BOCW.M82_reload_end", t = 4 },
             { hide = 0, t = 0 },
-            { hide = 1, t = 0.55 },
-            { hide = 0, t = 0.8 },
+            { hide = 1, t = 1.4 },
+            { hide = 0, t = 1.9 },
         },
         IKTimeLine = {
             {
@@ -1107,7 +1107,7 @@ SWEP.Animations = {
         Time = 4.62,
         MinProgress = 0.5,
         MagSwapTime = 1,
-        DropMagAt = 0.55,
+        DropMagAt = 1.4,
         EventTable = {
             { s = "ARC9_BOCW.M82_reload_start", t = 0 },
             { s = "ARC9_BOCW.M82_reload_magoutstart", t = 0.8 },
@@ -1118,8 +1118,8 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.M82_reload_boltrelease", t = 3.4 },
             { s = "ARC9_BOCW.M82_reload_end", t = 4 },
             { hide = 0, t = 0 },
-            { hide = 1, t = 0.55 },
-            { hide = 0, t = 0.8 },
+            { hide = 1, t = 1.4 },
+            { hide = 0, t = 1.9 },
         },
         IKTimeLine = {
             {

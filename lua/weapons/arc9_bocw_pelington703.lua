@@ -131,7 +131,7 @@ SWEP.TracerSize = 0.5
 
 -------------------------- MAGAZINE
 
-SWEP.Ammo = "pistol" -- What ammo type this gun uses.
+SWEP.Ammo = "ar2" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 5 -- Self-explanatory.
@@ -158,16 +158,6 @@ SWEP.ManualActionChamber = 1 -- How many shots we go between needing to cycle ag
 SWEP.ManualAction = true -- Pump/bolt action. Play the "cycle" animation after firing, when the trigger is released.
 SWEP.ManualActionNoLastCycle = true -- Do not cycle on the last shot.
 SWEP.ManualActionEjectAnyway = false -- Eject a shell when firing anyway.
-
-SWEP.DropMagazineModel = "models/weapons/arc9/atts/bocw_pelington703_magazine.mdl" -- Set to a string or table to drop this magazine when reloading.
-SWEP.DropMagazineSounds = {} -- Table of sounds a dropped magazine should play.
-SWEP.DropMagazineAmount = 1 -- Amount of mags to drop.
-SWEP.DropMagazineSkin = 0 -- Model skin of mag.
-SWEP.DropMagazineTime = 2
-SWEP.DropMagazineQCA = 4 -- QC Attachment drop mag from, would drop from shell port if not defined
-SWEP.DropMagazinePos = Vector(0, 0, 0) -- offsets
-SWEP.DropMagazineAng = Angle(0, -90, -90)
-SWEP.DropMagazineVelocity = Vector(0, -100, 0) -- Put something here if your anim throws the mag with force
 
 -------------------------- FIREMODES
 

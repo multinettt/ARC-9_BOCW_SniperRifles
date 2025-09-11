@@ -166,7 +166,7 @@ SWEP.DropMagazineTime = 2
 SWEP.DropMagazineQCA = 4 -- QC Attachment drop mag from, would drop from shell port if not defined
 SWEP.DropMagazinePos = Vector(0, 0, 0) -- offsets
 SWEP.DropMagazineAng = Angle(0, -90, -90)
-SWEP.DropMagazineVelocity = Vector(0, -100, 0) -- Put something here if your anim throws the mag with force
+SWEP.DropMagazineVelocity = Vector(0, 0, 80) -- Put something here if your anim throws the mag with force
 
 -------------------------- FIREMODES
 
@@ -361,10 +361,7 @@ SWEP.BobSprintMult = 0.1
 -------------------------- VISUALS
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
-    "tag_bullet_deplete_sqtl_00_animate",
-    "tag_bullet_deplete_sqtl_01_animate",
-    "tag_bullet_deplete_sqtl_02_animate",
-    "tag_bullet_deplete_sqtl_03_animate"
+    "tag_bullets"
 }
 SWEP.CaseBones = {}
 -- Unlike BulletBones, these bones are determined by the missing bullet amount when reloading
@@ -380,7 +377,7 @@ SWEP.StripperClipBGs = {}
 SWEP.HideBones = {
 } -- bones to hide in third person and customize menu. {"list", "of", "bones"}
 SWEP.ReloadHideBoneTables = {
-    [1] = {"tag_clip", "tag_bullet_deplete_sqtl_00_animate", "tag_bullet_deplete_sqtl_01_animate", "tag_bullet_deplete_sqtl_02_animate"},
+    [1] = {"tag_clip", "tag_bullets"},
 }
 
 SWEP.PoseParameters = {} -- Poseparameters to manage. ["parameter"] = starting value.
@@ -876,8 +873,8 @@ SWEP.Animations = {
         Source = "reload_empty",
         Time = 4.33,
         MinProgress = 0.6,
-        MagSwapTime = 1,
-        DropMagAt = 0.55,
+        MagSwapTime = 2,
+        DropMagAt = 1.7,
         EventTable = {
             { s = "ARC9_BOCW.LW3Tundra_reload_boltback", t = 0 },
             { s = "ARC9_BOCW.LW3Tundra_movement", t = 0.5 },
@@ -886,8 +883,8 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.LW3Tundra_reload_boltforward", t = 3 },
             { s = "ARC9_BOCW.LW3Tundra_movement", t = 3.6 },
             { hide = 0, t = 0 },
-            { hide = 1, t = 0.55 },
-            { hide = 0, t = 0.8 },
+            { hide = 1, t = 1.7 },
+            { hide = 0, t = 2.2 },
         },
         IKTimeLine = {
             {
@@ -929,8 +926,8 @@ SWEP.Animations = {
         Source = "reload_ext_empty",
         Time = 4.33,
         MinProgress = 0.6,
-        MagSwapTime = 1,
-        DropMagAt = 0.55,
+        MagSwapTime = 2,
+        DropMagAt = 1.7,
         EventTable = {
             { s = "ARC9_BOCW.LW3Tundra_reload_boltback", t = 0 },
             { s = "ARC9_BOCW.LW3Tundra_movement", t = 0.5 },
@@ -939,8 +936,8 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.LW3Tundra_reload_boltforward", t = 3 },
             { s = "ARC9_BOCW.LW3Tundra_movement", t = 3.6 },
             { hide = 0, t = 0 },
-            { hide = 1, t = 0.55 },
-            { hide = 0, t = 0.8 },
+            { hide = 1, t = 1.7 },
+            { hide = 0, t = 2.2 },
         },
         IKTimeLine = {
             {
@@ -991,7 +988,7 @@ SWEP.Animations = {
         Source = "reload_fast_empty",
         Time = 4.33,
         MinProgress = 0.6,
-        DropMagAt = 0.55,
+        DropMagAt = 1.6,
         EventTable = {
             { s = "ARC9_BOCW.LW3Tundra_cycle_boltback", t = 0 },
             { s = "ARC9_BOCW.LW3Tundra_movement", t = 0.5 },
@@ -999,8 +996,8 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.LW3Tundra_reload_fast_magin", t = 2.3 },
             { s = "ARC9_BOCW.LW3Tundra_reload_boltforward", t = 3 },
             { hide = 0, t = 0 },
-            { hide = 1, t = 0.55 },
-            { hide = 0, t = 0.8 },
+            { hide = 1, t = 1.6 },
+            { hide = 0, t = 2 },
         },
         IKTimeLine = {
             {
@@ -1057,8 +1054,8 @@ SWEP.Animations = {
         Source = "reload_mix_empty",
         Time = 4.33,
         MinProgress = 0.65,
-        MagSwapTime = 1,
-        DropMagAt = 0.55,
+        MagSwapTime = 2,
+        DropMagAt = 1.9,
         EventTable = {
             { s = "ARC9_BOCW.LW3Tundra_cycle_boltback", t = 0 },
             { s = "ARC9_BOCW.LW3Tundra_movement", t = 0.5 },
@@ -1067,8 +1064,8 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.LW3Tundra_reload_boltforward", t = 3 },
             { s = "ARC9_BOCW.LW3Tundra_movement", t = 3.6 },
             { hide = 0, t = 0 },
-            { hide = 1, t = 0.55 },
-            { hide = 0, t = 0.8 },
+            { hide = 1, t = 1.9 },
+            { hide = 0, t = 2.2 },
         },
         IKTimeLine = {
             {
