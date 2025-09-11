@@ -269,6 +269,13 @@ SWEP.BashDecal = "ManhackCut"
 SWEP.NotForNPCs = false -- Won't be given to NPCs.
 SWEP.NPCWeight = 100 -- How likely it is for an NPC to get this weapon as opposed to other weapons.
 
+-------------------------- BIPOD
+
+SWEP.Bipod = false -- This weapon comes with a bipod.
+SWEP.RecoilMultBipod = 0.25
+SWEP.SwayMultBipod = 0
+SWEP.FreeAimRadiusMultBipod = 0
+
 -------------------------- SOUNDS
 
 SWEP.ShootVolume = 125
@@ -632,7 +639,7 @@ SWEP.Attachments = {
         Pos = Vector(-7, -4.42, 6.21),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(20.25, 4.5, -5),
-        Category = {"bocw_m82_underbarrel", "bocw_smg_underbarrel_west"},
+        Category = {"bocw_m82_underbarrel", "bocw_sn_underbarrel"},
         InstalledElements = {"foregripon"},
     },
     {
@@ -704,6 +711,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     if attached["bocw_m82_optic_base"] or attached["bocw_optic"] then
         vm:SetBodygroup(2, 1)
+    end
+
+    if attached["bocw_m82_underbarrel_frontgrip"] or attached["bocw_m82_underbarrel_bipod"] then
+        vm:SetBodygroup(7, 1)
     end
 end
 

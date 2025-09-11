@@ -276,6 +276,13 @@ SWEP.BashDecal = "ManhackCut"
 SWEP.NotForNPCs = false -- Won't be given to NPCs.
 SWEP.NPCWeight = 100 -- How likely it is for an NPC to get this weapon as opposed to other weapons.
 
+-------------------------- BIPOD
+
+SWEP.Bipod = false
+SWEP.RecoilMultBipod = 0.25
+SWEP.SwayMultBipod = 0
+SWEP.FreeAimRadiusMultBipod = 0
+
 -------------------------- SOUNDS
 
 SWEP.ShootVolume = 125
@@ -559,7 +566,9 @@ SWEP.AttachmentTableOverrides = {
         VisualRecoil = 0.1
     },
     ["bocw_pelington703_optic_base"] = {
-        VisualRecoil = 0.1
+        VisualRecoil = 0.1,
+        ModelOffset = Vector(-0.15,0,-0.11),
+        Scale = 1
     },
     ["bocw_optic_royalkross4x"] = {
         VisualRecoil = 0.1
@@ -627,10 +636,10 @@ SWEP.Attachments = {
     {
         PrintName = "UNDRBARREL",
         Bone = "tag_weapon",
-        Pos = Vector(-7, -4.42, 4.5),
+        Pos = Vector(-9, -4.42, 4.5),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(20.25, 4.5, -5),
-        Category = {"bocw_pelington703_underbarrel", "bocw_smg_underbarrel_west"},
+        Category = {"bocw_pelington703_underbarrel", "bocw_sn_underbarrel"},
         InstalledElements = {"foregripmount"},
     },
     {
@@ -713,6 +722,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
+
+    if attached["bocw_sniper_underbarrel_frontgrip"] or attached["bocw_sniper_underbarrel_bipod"] then
+        vm:SetBodygroup(5, 1)
+    end
 end
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)
@@ -893,17 +906,7 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.1,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.85,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.9,
+                t = 1,
                 lhik = 1,
                 rhik = 0
             },
