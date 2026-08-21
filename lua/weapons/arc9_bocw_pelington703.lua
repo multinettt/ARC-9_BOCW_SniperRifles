@@ -828,6 +828,7 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.Pelington703_boltback", t = 0.2 },
             { s = "ARC9_BOCW.Pelington703_boltforward", t = 0.3 },
         },
+        FireASAP = 1,
         MinProgress = 0.8,
         FireASAP = true
     },
@@ -862,6 +863,7 @@ SWEP.Animations = {
     ["reload_start"] = {
         Source = "reload_in",
         Time = 1.53,
+        FireASAP = 1,
         MinProgress = 0.8,
         RestoreAmmo = 1,
         EventTable = {
@@ -872,6 +874,7 @@ SWEP.Animations = {
     ["reload_insert"] = {
         Source = "reload_loop",
         Time = 0.83,
+        FireASAP = 1,
         MinProgress = 0.7,
         EventTable = {
             { s = "ARC9_BOCW.Pelington703_bulletin", t = 0.4 },

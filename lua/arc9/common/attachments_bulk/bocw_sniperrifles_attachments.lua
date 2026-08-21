@@ -44,7 +44,7 @@ ATT.RTScopeReticle = Material("hud/arc9_bocw/reticle_pelington703.png", "mips sm
 
 ATT.RTScopeReticleScale = 1.8
 ATT.RTScopeNew_ShadowScale = 0.75
-
+ATT.RTScopeNew_DisableRTVM = true
 ATT.RTScopeColorable = true
 
 ATT.ModelOffset = Vector(0, 0, -0.11)
@@ -826,7 +826,7 @@ ATT.RTScopeReticle = Material("hud/arc9_bocw/reticle_lw3tundra.png", "mips smoot
 
 ATT.RTScopeReticleScale = 1.4
 ATT.RTScopeNew_ShadowScale = 0.95
-
+ATT.RTScopeNew_DisableRTVM = true
 ATT.RTScopeColorable = true
 
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -1576,7 +1576,7 @@ ATT.RTScopeReticle = Material("hud/arc9_bocw/reticle_m82.png", "mips smooth")
 
 ATT.RTScopeReticleScale = 1.4
 ATT.RTScopeNew_ShadowScale = 1
-
+ATT.RTScopeNew_DisableRTVM = true
 ATT.RTScopeColorable = true
 
 ATT.ModelOffset = Vector(0, 0, 1.63)
